@@ -4,8 +4,8 @@ class Dactyle {
         this.target = target;
         this.text = text;
         this.table = this.setTable(this.text);
-        this.minSpeed = minSpeed;
-        this.maxSpeed = maxSpeed;
+        this.minSpeed = minSpeed || 50;
+        this.maxSpeed = maxSpeed || 150;
         this.iteration = 0;
         this.htmlSupport = htmlSupport || true;
     }
