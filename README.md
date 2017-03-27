@@ -26,10 +26,10 @@ Then, Dactyle need another HTML element, the one which it will type the text :
 
 Now, you have to initialize Dactyle in a JS file :
 
-    let dactyleInstance = new Dactyle ({
-        document.querySelector('#idOfTheTextDactyleWillType'),
-        document.querySelector('#idOfTheTarget').innerHTML
-    });
+    let dactyleInstance = new Dactyle (
+        document.querySelector('#idOfTheTarget'),
+        document.querySelector('#idOfTheTextDactyleWillType').innerHTML,
+    );
 
     // Then, tell me to type the text :
     dactyleInstance.type();
