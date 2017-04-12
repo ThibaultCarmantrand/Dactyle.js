@@ -27,7 +27,7 @@ Then, Dactyle need another HTML element, the one which it will type the text :
 Now, you have to initialize Dactyle in a JS file :
 
     let dactyleInstance = new Dactyle (
-        document.querySelector('#idOfTheTarget'),
+        '#idOfTheTarget',
         document.querySelector('#idOfTheTextDactyleWillType').innerHTML,
     );
 
@@ -44,6 +44,7 @@ This is the list of arguments which are supported by Dactyle :
 1. **Target**
 
     This is the HTML element where Dactyle will type the text.
+    Send any string which can be selected by querySelector().
 
 2. **Text**
 
@@ -60,3 +61,8 @@ This is the list of arguments which are supported by Dactyle :
 5. **HTML tags support**
 
     A boolean which determined if Dactyle has to support HTML tags or not. Default is `true`.
+
+
+## TODO
+
+* [ ] Add a cursor after the text

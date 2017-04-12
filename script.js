@@ -1,6 +1,6 @@
-let dactyleInstance = new Dactyle (
+let dactyle = new Dactyle (
     '#target',
     document.querySelector('#content').innerHTML
 );
 
-dactyleInstance.type();
+dactyle.type();

@@ -9,7 +9,6 @@ class Dactyle {
         this.maxSpeed = maxSpeed || 150;
         this.iteration = 0;
         this.htmlSupport = htmlSupport || true;
-        this.createCursor();
     }
 
     type () {
@@ -50,23 +49,5 @@ class Dactyle {
 
     getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
-    }
-
-    createCursor() {
-        let style = document.createElement('style');
-        let style2 = document.createElement('style');
-        let sheet = style2.sheet;
-
-        document.head.appendChild(style);
-        document.head.appendChild(style2);
-
-        style.innerHTML = `@keyframes blink {
-            0%   { opacity: 1; }
-            50%  { opacity: 0; }
-            100% { opacity: 1; }}
-        `;
-
-        sheet.addRule(this.targetQuery + '::after', 'content: "|"');
-        sheet.addRule(this.targetQuery + '::after', 'animation: blink 0.7s ease-in-out infinite');
     }
 }
